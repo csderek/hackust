@@ -1,9 +1,18 @@
+.main-div {
+	padding: 2px;
+}
+#main-status-completed {
+	color: #12971D;
+}
+#main-status-urgent {
+	color: red;
+}
 .glyphicon-piggy-bank {
 	font-size: 70px;
 }
 
 .button-text {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 }
 .row-details, .row-details-total {
@@ -30,7 +39,11 @@
 	font-weight: bold;
 }
 .details {
-	padding: 2px;
+	padding-left: 7px;
+	padding-right: 4px;
+}
+.details-bottom {
+	padding-bottom: 10px;
 }
 #eur-usd-chart, #bond-chart, #stock-chart{
 	height: 200px;
@@ -68,4 +81,40 @@
 }
 .underline {
 	text-decoration: underline;
+}
+
+.detailed-advising-background {
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	padding-left: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 1px;
+	margin-right: 1px;
+	height: auto;
+}
+.detailed-advising-background-special {
+	padding-top: 20px;
+	padding-bottom: 47px;
+}
+.detailed-advising-background-special2 {
+	padding-bottom: 95px;
+}
+.detailed-advising-table {
+	width: 100%;
+
+}
+.detailed-advising-warning {
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.detailed-advising-warning i {
+	color: red;
+}
+.detailed-advising-return {
+	padding-top: 5px;
+}
+.bold {
+	font-weight: bold;
 }

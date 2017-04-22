@@ -23,17 +23,12 @@
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    <script type="text/javascript">
-        
-    </script>
 
 </head>
 
@@ -159,218 +154,98 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Setting</h1>
+                        <h1 class="page-header">Profile</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
+                <!-- /.row -->
                 <div class="row">
                     <div class="col-lg-12">
-                        <h3>Report</h3>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h4>Fast Report</h4>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input id="fastReport" type="checkbox" value=""> <label>Regular Generate Fast Finacial Advising</label>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-xs-2">
-
-                            <label>Frequency :</label> Every 
-                        </div>
-                        <div class="col-xs-2">
-                            <input id="fastInput" type="text" value=""> 
-                        </div>
-                        <div class="col-xs-2">
-                            <select id="fastSelect">
-                                <option>day(s)</option>
-                                <option>week(s)</option>
-                                <option>month(s)</option>
-                                <option>year(s)</option>
-                            </select>   
-                        </div>                     
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h4>Detail Report</h4>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input id="detailReport" type="checkbox" value=""> <label>Regular Generate Detail Finacial Advising</label>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-xs-2">
-
-                            <label>Frequency :</label> Every 
-                        </div>
-                        <div class="col-xs-2">
-                            <input id="detailInput" type="text" value=""> 
-                        </div>
-                        <div class="col-xs-2">
-                            <select id="detailSelect">
-                                <option>day(s)</option>
-                                <option>week(s)</option>
-                                <option>month(s)</option>
-                                <option>year(s)</option>
-                            </select>   
-                        </div>                     
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h3>Email and Notification</h3>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h4>Email</h4>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="checkbox" value="" checked> <label>Send Email to Me When Detail Finacial Advising is Ready</label>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <br>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h4>Notification</h4>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="checkbox" value="" checked> <label>Send Warning Notification When My Expenditure is Over</label>
-                        <input id="expenditure" type="number" value="80"> 
-                        <label>%</label>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-xs-2">
-
-                            <label>Frequency :</label> Every 
-                        </div>
-                        <div class="col-xs-2">
-                            <input id="eInput" type="text" value="1"> 
-                        </div>
-                        <div class="col-xs-2">
-                            <select id="eSelect">
-                                <option>day(s)</option>
-                                <option selected>week(s)</option>
-                                <option>month(s)</option>
-                                <option>year(s)</option>
-                            </select>   
-                        </div>                     
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="checkbox" value="" checked> <label>Send Warning Notification When My Investment's Balance is Lower than HKD </label>
-                        <input id="expenditure" type="number" value="10000"> 
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-xs-2">
-
-                            <label>Frequency :</label> Every 
-                        </div>
-                        <div class="col-xs-2">
-                            <input id="ibInput" type="text" value="1"> 
-                        </div>
-                        <div class="col-xs-2">
-                            <select id="ibSelect">
-                                <option>day(s)</option>
-                                <option selected>week(s)</option>
-                                <option>month(s)</option>
-                                <option>year(s)</option>
-                            </select>   
-                        </div>                     
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="checkbox" value="" checked> <label>Send Warning Notification When My Retire Planning is Not Recommended</label>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-xs-2">
-
-                            <label>Frequency :</label> Every 
-                        </div>
-                        <div class="col-xs-2">
-                            <input id="rpInput" type="text" value="3"> 
-                        </div>
-                        <div class="col-xs-2">
-                            <select id="rpSelect">
-                                <option>day(s)</option>
-                                <option>week(s)</option>
-                                <option selected>month(s)</option>
-                                <option>year(s)</option>
-                            </select>   
-                        </div>                     
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <input type="checkbox" value="" checked> <label>Send Warning Notification When My Mortgage is Not Recommended</label>
-                    </div>
-                    <!-- /.col-lg-12 -->
-                </div>
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="col-xs-2">
-
-                            <label>Frequency :</label> Every 
-                        </div>
-                        <div class="col-xs-2">
-                            <input id="mInput" type="text" value="3"> 
-                        </div>
-                        <div class="col-xs-2">
-                            <select id="mSelect">
-                                <option>day(s)</option>
-                                <option>week(s)</option>
-                                <option selected>month(s)</option>
-                                <option>year(s)</option>
-                            </select>   
-                        </div>                     
+                        <img src="../img/empty-profile-pic.png" width="200px">
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <br>
                 <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Name: </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <label>Chan Siu Ming</label>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Nickname: </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value="Peter"> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Email: </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value="peterChan@mail.com"> 
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Occupation: </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value="Students"> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Monthly Income(HKD): </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="number" value="5000"> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Address: </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value="10/f,hall2,hkust"> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label></label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value="Sai Kung, Hong Kong"> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label></label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value=""> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-xs-1">
                         <button type="button" class="btn btn-primary">Save</button>
@@ -378,7 +253,59 @@
                     <div class="col-xs-1">
                         <button type="button" class="btn">Cancel</button>
                     </div>
+                    <!-- /.col-lg-12 -->
                 </div>
+
+                <br>
+                <br>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">Change Password</h1>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Old Password: </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value=""> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>New Password: </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value=""> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <label>Re-Input New Password: </label>
+                    </div>
+                    <div class="col-lg-6">
+                        <input id="detailInput" type="text" value=""> 
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-1">
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                    <div class="col-xs-1">
+                        <button type="button" class="btn">Cancel</button>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <br>
+                <br>
             </div>
             <!-- /.container-fluid -->
         </div>
