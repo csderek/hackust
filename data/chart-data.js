@@ -32,6 +32,12 @@ window.onload = function () {
     chart1.render();
   });
 
+    for (var i = 0; i < data2.length; i++) {
+      data2[i].x = data2[i].x * 1000 + 100000000000;
+      if (data2[i].y < 10000 && data2[i].x > 1262304000*1000) {
+        data2[i].y = data2[i].y + 16000;
+      }
+    }
     var chart2 = new CanvasJS.Chart("bond-chart",
     {
       zoomEnabled: true,
@@ -47,7 +53,13 @@ window.onload = function () {
         includeZero:false
       },
       
-      data: data2  // random generator below
+      data: [
+        {
+          type: "line", 
+          xValueType: "dateTime",
+          dataPoints: data2
+        }
+      ]  // random generator below
       
     });
 
@@ -77,7 +89,7 @@ window.onload = function () {
     $(".canvasjs-chart-credit").remove();
 }
 
-var limit2 = 5000;
+/*var limit2 = 5000;
 var y2 = 24000;
 var data2 = []; var dataSeries2 = { type: "line", xValueType: "dateTime" };
 var dataPoints2 = [];
@@ -89,7 +101,7 @@ for (var i2 = 0; i2 < limit2; i2 += 1) {
   });
 }
 dataSeries2.dataPoints = dataPoints2;
-data2.push(dataSeries2); 
+data2.push(dataSeries2);*/ 
 
 var limit3 = 100000;
 var y3 = 400000;
