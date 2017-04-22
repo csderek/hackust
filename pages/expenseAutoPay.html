@@ -29,6 +29,297 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Expense', 'Dollars'],
+          ['Water', 500],
+          ['Electricity',     600],
+          ['Octopus',      1000],
+          ['Tuition Fee',  3000],
+          ['Credit Card', 4000],
+          ['Other',    500]
+        ]);
+
+        var options = {
+          title: 'My Expense - per month',
+          pieHole: 0.4,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+        chart.draw(data, options);
+      }
+      window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+            {
+              theme: "theme2",
+              title:{
+                text: "Water - per month"
+              },
+              animationEnabled: true,
+              axisX: {
+                valueFormatString: "MMM",
+                interval:1,
+                intervalType: "month"
+                
+              },
+              axisY:{
+                includeZero: false
+                
+              },
+              data: [
+              {        
+                type: "line",
+                //lineThickness: 3,        
+                dataPoints: [
+                { x: new Date(2017, 00, 1), y: 300 },
+                { x: new Date(2017, 01, 1), y: 400},
+                { x: new Date(2017, 02, 1), y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+                { x: new Date(2017, 03, 1), y: 320 },
+                { x: new Date(2017, 04, 1), y: 440 },
+                { x: new Date(2017, 05, 1), y: 400 },
+                { x: new Date(2017, 06, 1), y: 480 },
+                { x: new Date(2017, 07, 1), y: 480 },
+                { x: new Date(2017, 08, 1), y: 290 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+                { x: new Date(2017, 09, 1), y: 400 },
+                { x: new Date(2017, 10, 1), y: (500/1.2) },
+                { x: new Date(2017, 11, 1), y: 500 }
+                
+                ]
+              }
+              
+              
+              ]
+            });
+
+            chart.render();
+
+
+
+            $(".canvasjs-chart-credit").remove();
+
+            var chart2 = new CanvasJS.Chart("chartContainer2",
+            {
+              theme: "theme2",
+              title:{
+                text: "Electricity - per month"
+              },
+              animationEnabled: true,
+              axisX: {
+                valueFormatString: "MMM",
+                interval:1,
+                intervalType: "month"
+                
+              },
+              axisY:{
+                includeZero: false
+                
+              },
+              data: [
+              {        
+                type: "line",
+                //lineThickness: 3,        
+                dataPoints: [
+                { x: new Date(2017, 00, 1), y: 589 },
+                { x: new Date(2017, 01, 1), y: 602},
+                { x: new Date(2017, 02, 1), y: 633, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+                { x: new Date(2017, 03, 1), y: 611 },
+                { x: new Date(2017, 04, 1), y: 579 },
+                { x: new Date(2017, 05, 1), y: 520 },
+                { x: new Date(2017, 06, 1), y: 488 },
+                { x: new Date(2017, 07, 1), y: 450 },
+                { x: new Date(2017, 08, 1), y: 434 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+                { x: new Date(2017, 09, 1), y: 450 },
+                { x: new Date(2017, 10, 1), y: (600/1.2) },
+                { x: new Date(2017, 11, 1), y: 600 }
+                
+                ]
+              }
+              
+              
+              ]
+            });
+
+            chart2.render();
+
+            var chart3 = new CanvasJS.Chart("chartContainer3",
+            {
+              theme: "theme2",
+              title:{
+                text: "Tuition Fee - per year"
+              },
+              animationEnabled: true,
+              axisX: {
+                valueFormatString: "YYYY",
+                interval:1,
+                intervalType: "year"
+                
+              },
+              axisY:{
+                includeZero: false
+                
+              },
+              data: [
+              {        
+                type: "line",
+                //lineThickness: 3,        
+                dataPoints: [
+                { x: new Date(2014, 00, 1), y: 36000},
+                { x: new Date(2015, 01, 1), y: 36000},
+                { x: new Date(2016, 02, 1), y: 36000},
+                { x: new Date(2017, 03, 1), y: 36000}
+                ]
+              }
+              
+              
+              ]
+            });
+
+            chart3.render();
+
+            var chart4 = new CanvasJS.Chart("chartContainer4",
+            {
+              theme: "theme2",
+              title:{
+                text: "Credit Card - per month"
+              },
+              animationEnabled: true,
+              axisX: {
+                valueFormatString: "MMM",
+                interval:1,
+                intervalType: "month"
+                
+              },
+              axisY:{
+                includeZero: false
+                
+              },
+              data: [
+              {        
+                type: "line",
+                //lineThickness: 3,        
+                dataPoints: [
+                { x: new Date(2017, 00, 1), y: 2201 },
+                { x: new Date(2017, 01, 1), y: 3423},
+                { x: new Date(2017, 02, 1), y: 5000, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+                { x: new Date(2017, 03, 1), y: 4123 },
+                { x: new Date(2017, 04, 1), y: 3567 },
+                { x: new Date(2017, 05, 1), y: 2890 },
+                { x: new Date(2017, 06, 1), y: 4423 },
+                { x: new Date(2017, 07, 1), y: 3200 },
+                { x: new Date(2017, 08, 1), y: 2200 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+                { x: new Date(2017, 09, 1), y: 3700 },
+                { x: new Date(2017, 10, 1), y: (4000/0.95) },
+                { x: new Date(2017, 11, 1), y: 4000 }
+                
+                ]
+              }
+              
+              
+              ]
+            });
+
+            chart4.render();
+
+            var chart5 = new CanvasJS.Chart("chartContainer5",
+            {
+              theme: "theme2",
+              title:{
+                text: "Octopus - per month"
+              },
+              animationEnabled: true,
+              axisX: {
+                valueFormatString: "MMM",
+                interval:1,
+                intervalType: "month"
+                
+              },
+              axisY:{
+                includeZero: false
+                
+              },
+              data: [
+              {        
+                type: "line",
+                //lineThickness: 3,        
+                dataPoints: [
+                { x: new Date(2017, 00, 1), y: 820 },
+                { x: new Date(2017, 01, 1), y: 700},
+                { x: new Date(2017, 02, 1), y: 1050, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+                { x: new Date(2017, 03, 1), y: 750 },
+                { x: new Date(2017, 04, 1), y: 800 },
+                { x: new Date(2017, 05, 1), y: 900 },
+                { x: new Date(2017, 06, 1), y: 950 },
+                { x: new Date(2017, 07, 1), y: 850 },
+                { x: new Date(2017, 08, 1), y: 650 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+                { x: new Date(2017, 09, 1), y: 800 },
+                { x: new Date(2017, 10, 1), y: (1000/1.2) },
+                { x: new Date(2017, 11, 1), y: 1000 }
+                
+                ]
+              }
+              
+              
+              ]
+            });
+
+            chart5.render();
+
+
+
+            $(".canvasjs-chart-credit").remove();
+
+            var chart6 = new CanvasJS.Chart("chartContainer6",
+            {
+              theme: "theme2",
+              title:{
+                text: "Others - per month"
+              },
+              animationEnabled: true,
+              axisX: {
+                valueFormatString: "MMM",
+                interval:1,
+                intervalType: "month"
+                
+              },
+              axisY:{
+                includeZero: false
+                
+              },
+              data: [
+              {        
+                type: "line",
+                //lineThickness: 3,        
+                dataPoints: [
+                { x: new Date(2017, 00, 1), y: 407 },
+                { x: new Date(2017, 01, 1), y: 433},
+                { x: new Date(2017, 02, 1), y: 520, indexLabel: "highest",markerColor: "red", markerType: "triangle"},
+                { x: new Date(2017, 03, 1), y: 490 },
+                { x: new Date(2017, 04, 1), y: 440 },
+                { x: new Date(2017, 05, 1), y: 510 },
+                { x: new Date(2017, 06, 1), y: 488 },
+                { x: new Date(2017, 07, 1), y: 410 },
+                { x: new Date(2017, 08, 1), y: 400 , indexLabel: "lowest",markerColor: "DarkSlateGrey", markerType: "cross"},
+                { x: new Date(2017, 09, 1), y: 420 },
+                { x: new Date(2017, 10, 1), y: (500/0.95) },
+                { x: new Date(2017, 11, 1), y: 500 }
+                
+                ]
+              }
+              
+              
+              ]
+            });
+
+            chart6.render();
+            
+            $(".canvasjs-chart-credit").remove();
+        }
+      </script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
 
 </head>
 
@@ -372,15 +663,104 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Blank</h1>
+                        <h1 class="page-header">Expense</h1>
                     </div>
                     <!-- /.col-lg-12 -->
                 </div>
                 <!-- /.row -->
+                <div class="row">
+                    <div id="donutchart" style="width: 900px; height: 500px;"></div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <!-- /.row -->
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div  class="col-xs-5"><h1>Water</h1></div>
+                            <div  class="col-xs-3"><h1>$500</h1></div>
+                            <div  class="col-xs-4 positive"><h3>(+20%) <i  class="fa fa-exclamation-triangle" style="color: orange;"></i></h3> </div>
+
+                        </div>
+                        <div class = "row">
+                            <div id="chartContainer" style="height: 300px; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div  class="col-xs-5"><h1>Electricity</h1></div>
+                            <div  class="col-xs-3"><h1>$600</h1></div>
+                            <div  class="col-xs-4 positive"><h3>(+2%) <i  class="fa fa-check-circle" style="color: green;"></i></h3> </div>
+
+                        </div>
+                        <div class = "row">
+                            <div id="chartContainer2" style="height: 300px; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div  class="col-xs-5"><h1>Tuition Fee</h1></div>
+                            <div  class="col-xs-4"><h1>$36000</h1></div>
+                            <div  class="col-xs-3"><h3>(--%) <i  class="fa fa-check-circle" style="color: green;"></i></h3> </div>
+
+                        </div>
+                        <div class = "row">
+                            <div id="chartContainer3" style="height: 300px; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div  class="col-xs-5"><h1>Credit Card</h1></div>
+                            <div  class="col-xs-4"><h1>$4000</h1></div>
+                            <div  class="col-xs-3 negative"><h3>(-5%) <i  class="fa fa-check-circle" style="color: green;"></i></h3> </div>
+
+                        </div>
+                        <div class = "row">
+                            <div id="chartContainer4" style="height: 300px; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div  class="col-xs-5"><h1>Octopus</h1></div>
+                            <div  class="col-xs-3"><h1>$1000</h1></div>
+                            <div  class="col-xs-4 positive"><h3>(+20%) <i  class="fa fa-exclamation-triangle" style="color: orange;"></i></h3> </div>
+
+                        </div>
+                        <div class = "row">
+                            <div id="chartContainer5" style="height: 300px; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div  class="col-xs-5"><h1>Others</h1></div>
+                            <div  class="col-xs-4"><h1>$500</h1></div>
+                            <div  class="col-xs-3 negative"><h3>(-2%) <i  class="fa fa-check-circle" style="color: green;"></i></h3> </div>
+
+                        </div>
+                        <div class = "row">
+                            <div id="chartContainer6" style="height: 300px; width: 100%;">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
             </div>
             <!-- /.container-fluid -->
         </div>
         <!-- /#page-wrapper -->
+
 
     </div>
     <!-- /#wrapper -->
