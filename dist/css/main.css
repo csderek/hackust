@@ -42,6 +42,9 @@
 	padding-left: 7px;
 	padding-right: 4px;
 }
+.details-bottom {
+	padding-bottom: 10px;
+}
 #eur-usd-chart, #bond-chart, #stock-chart{
 	height: 200px;
 	width: 80%;
