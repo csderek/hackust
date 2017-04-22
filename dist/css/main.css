@@ -14,6 +14,58 @@
 .row-details-total {
 	border-top: 1px #000;
 }
-.investment-img{
+.positive {
+	color: #F01313;
+}
+.negative {
+	color: #25F013;
+}
+.investment-img {
 	width: 100%;
+}
+.details-title {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+.details {
+	padding: 2px;
+}
+#eur-usd-chart, #bond-chart, #stock-chart{
+	height: 200px;
+	width: 80%;
+	margin:0 auto;
+}
+.retirement-details {
+	text-align: center;
+	height: 25px;
+	line-height: 32px;
+}
+.retirement-details-bottom {
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #4613F0;
+}
+.retirement-details-box {
+	text-align: center;
+}
+.retirement-table {
+	width: 100%;
+}
+.retirement-table, .retirement-table th, .retirement-table td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: 8px;
+}
+.financial-instructment {
+	width: 100px;
+}
+.retirement-target {
+	font-size: 18px;
+	color: #4613F0;
+}
+.underline {
+	text-decoration: underline;
 }
