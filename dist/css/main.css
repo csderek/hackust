@@ -82,3 +82,39 @@
 .underline {
 	text-decoration: underline;
 }
+
+.detailed-advising-background {
+	background-color: #f5f5f5;
+	border: 1px solid #e3e3e3;
+	padding-left: 25px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-left: 1px;
+	margin-right: 1px;
+	height: auto;
+}
+.detailed-advising-background-special {
+	padding-top: 20px;
+	padding-bottom: 47px;
+}
+.detailed-advising-background-special2 {
+	padding-bottom: 95px;
+}
+.detailed-advising-table {
+	width: 100%;
+
+}
+.detailed-advising-warning {
+	font-size: 16px;
+	font-weight: bold;
+	padding-bottom: 5px;
+}
+.detailed-advising-warning i {
+	color: red;
+}
+.detailed-advising-return {
+	padding-top: 5px;
+}
+.bold {
+	font-weight: bold;
+}
