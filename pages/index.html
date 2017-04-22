@@ -218,25 +218,25 @@
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-table fa-fw"></i> Fast Advising</a>
+                            <a href="tables.html"><i class="fa fa-info fa-fw"></i> Fast Advising</a>
                         </li>
                         <li>
-                            <a href="expenseAutoPay.html"><i class="fa fa-edit fa-fw"></i> Expense</a>
+                            <a href="expenseAutoPay.html"><i class="fa fa-money fa-fw"></i> Expense</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-wrench fa-fw"></i> Investment</a>
+                            <a href="investment.html"><i class="fa fa-dollar fa-fw"></i> Investment</a>
                         </li>
                         <li>
-                            <a href="retirementPlanning.html"><i class="fa fa-sitemap fa-fw"></i> Retirement Planning</a>
+                            <a href="retirementPlanning.html"><i class="fa fa-group fa-fw"></i> Retirement Planning</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Mortgage</a>
+                            <a href="buttons.html"><i class="fa fa-building fa-fw"></i> Mortgage</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Detailed Advising</a>
+                            <a href="#"><i class="fa fa-file fa-fw"></i> Detailed Advising</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Settings</a>
+                            <a href="setting.html"><i class="fa fa-cog fa-fw"></i> Settings</a>
                         </li>
                     </ul>
                 </div>
@@ -260,25 +260,26 @@
                     </div>
                     <div class="col-xs-4">
                         <div class = "row">
-                            <h1>&nbspCompleted</h1>
-                        </div>
-                        <div class = "row">
-                            <ul>
-                              <li>Credit Card</li>
-                              <li>InternetBill</li>
-                            </ul>
-                        </div>
-                       
-                    </div>
-                    <div class="col-xs-2">
-                        <div class = "row">
-                            <h1>&nbspUrgent</h1>
+                            <h1>&nbspUrgent <i class="fa fa-warning" id="main-status-urgent"></i></h1>
                         </div>
                         <div class = "row">
                             <ul>
                               <li>Electricity Bill</li>
                               <li>Water Bill</li>
-                              <li>Debt</li>
+                              <li>Credit Card Bill</li>
+                            </ul>
+                        </div>
+                        
+                       
+                    </div>
+                    <div class="col-xs-4">
+                        <div class = "row">
+                            <h1>&nbspCompleted <i class="fa fa-check-circle" id="main-status-completed"></i></h1>
+                        </div>
+                        <div class = "row">
+                            <ul>
+                              <li>Credit Card</li>
+                              <li>Internet Bill</li>
                             </ul>
                         </div>
                        
@@ -294,11 +295,11 @@
 
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 main-div">
                     <div class="panel panel-primary">
                         <div class="panel-heading">
-                            <div class="row-">
-                                    <div class="button-text">Expense</div>
+                            <div class="row">
+                                <div class="button-text"><i class="fa fa-money"></i> Expense</div>
                             </div>
                         </div>
                         <div class="whole-row">
@@ -389,11 +390,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 main-div">
                     <div class="panel panel-green">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="button-text">Investment</div>
+                                <div class="button-text"><i class="fa fa-dollar"></i> Investment</div>
                             </div>
                         </div>
                         <div class="whole-row">
@@ -411,7 +412,7 @@
                             </div>
                             <div class="row-details">
                                 <div class="col-xs-6">
-                                    <span>Bond</span>
+                                    <span>Stock</span>
                                 </div>
                                 <div class="col-xs-6">
                                     <span class="positive">-$13590</span>
@@ -424,7 +425,7 @@
 
                             <div class="row-details">
                                 <div class="col-xs-6">
-                                    <span>Stock</span>
+                                    <span>Fund</span>
                                 </div>
                                 <div class="col-xs-6">
                                     <span class="negative">+$2390</span>
@@ -436,7 +437,7 @@
                             </div>
                         </div>
 
-                        <a href="#">
+                        <a href="investment.html">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -445,11 +446,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 main-div">
                     <div class="panel panel-yellow">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="button-text">Retirement Planning</div>
+                                <div class="button-text"><i class="fa fa-group"></i> Retirement Planning</div>
                             </div>
                         </div>
                         <div class="whole-row">
@@ -464,7 +465,7 @@
                                     <span class="details">Current Monthly Payment: </span>
                                 </div>
                                 <div class="col-xs-3">
-                                    <span class="pull-right">$1000</span>
+                                    <span class="pull-right details">$1000</span>
                                 </div>
                             </div>
                             <div class="row">
@@ -472,17 +473,17 @@
                                     <span class="details">Current Period: </span>
                                 </div>
                                 <div class="col-xs-4">
-                                    <span class="pull-right">Year 5</span>
+                                    <span class="pull-right details">Year 5</span>
                                 </div>
                                 <div class="col-xs-8">
                                     <span class="details">Remaining Period: </span>
                                 </div>
                                 <div class="col-xs-4">
-                                    <span class="pull-right">15 Years</span>
+                                    <span class="pull-right details">15 Years</span>
                                 </div>                        
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="retirementPlanning.html">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -491,11 +492,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <div class="col-lg-3 col-md-6 main-div">
                     <div class="panel panel-red">
                         <div class="panel-heading">
                             <div class="row">
-                                <div class="button-text">Mortgage</div>
+                                <div class="button-text"><i class="fa fa-building"></i> Mortgage</div>
                             </div>
                         </div>
                         <div class="whole-row">
@@ -510,7 +511,7 @@
                                     <span class="details">Current Monthly Payment: </span>
                                 </div>
                                 <div class="col-xs-3">
-                                    <span class="pull-right">$7920</span>
+                                    <span class="pull-right details">$7920</span>
                                 </div>
                             </div>
                             <div class="row">
@@ -518,17 +519,17 @@
                                     <span class="details">Current Period: </span>
                                 </div>
                                 <div class="col-xs-4">
-                                    <span class="pull-right">Year 10</span>
+                                    <span class="pull-right details">Year 10</span>
                                 </div>
                                 <div class="col-xs-8">
                                     <span class="details">Remaining Period: </span>
                                 </div>
                                 <div class="col-xs-4">
-                                    <span class="pull-right">20 Years</span>
+                                    <span class="pull-right details">20 Years</span>
                                 </div>                        
                             </div>
                         </div>
-                        <a href="#">
+                        <a href="buttons.html">
                             <div class="panel-footer">
                                 <span class="pull-left">View Details</span>
                                 <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
