@@ -65,14 +65,14 @@ window.onload = function () {
     $(".canvasjs-chart-credit").remove();
 }
 
-var limit = 100000;    //increase number of dataPoints by increasing this  
+var limit = 5000;    //increase number of dataPoints by increasing this  
 var y = 0;
-var data = []; var dataSeries = { type: "line" };
+var data = []; var dataSeries = { type: "line", xValueType: "dateTime" };
 var dataPoints = [];
 for (var i = 0; i < limit; i += 1) {
   y += (Math.random() * 10 - 5);
   dataPoints.push({
-    x: i - limit / 2,
+    x: 1488326400000 + i * 1050000,
     y: y                
   });
 }
