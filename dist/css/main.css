@@ -1,9 +1,18 @@
+.main-div {
+	padding: 2px;
+}
+#main-status-completed {
+	color: #12971D;
+}
+#main-status-urgent {
+	color: #DBE42F;
+}
 .glyphicon-piggy-bank {
 	font-size: 70px;
 }
 
 .button-text {
-	font-size: 25px;
+	font-size: 20px;
 	text-align: center;
 }
 .row-details, .row-details-total {
@@ -30,7 +39,8 @@
 	font-weight: bold;
 }
 .details {
-	padding: 2px;
+	padding-left: 7px;
+	padding-right: 4px;
 }
 #eur-usd-chart, #bond-chart, #stock-chart{
 	height: 200px;
