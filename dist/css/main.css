@@ -1,0 +1,19 @@
+.glyphicon-piggy-bank {
+	font-size: 70px;
+}
+
+.button-text {
+	font-size: 25px;
+	text-align: center;
+}
+.row-details, .row-details-total {
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+.row-details-total {
+	border-top: 1px #000;
+}
+.investment-img{
+	width: 100%;
+}
