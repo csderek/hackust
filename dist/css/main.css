@@ -37,6 +37,35 @@
 	width: 80%;
 	margin:0 auto;
 }
-.whole-row {
-
+.retirement-details {
+	text-align: center;
+	height: 25px;
+	line-height: 32px;
+}
+.retirement-details-bottom {
+	margin-bottom: 8px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #4613F0;
+}
+.retirement-details-box {
+	text-align: center;
+}
+.retirement-table {
+	width: 100%;
+}
+.retirement-table, .retirement-table th, .retirement-table td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	padding: 8px;
+}
+.financial-instructment {
+	width: 100px;
+}
+.retirement-target {
+	font-size: 18px;
+	color: #4613F0;
+}
+.underline {
+	text-decoration: underline;
 }
