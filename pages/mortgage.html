@@ -231,7 +231,7 @@
 			</div>
 			<div class="row">
 				<div class="col-lg-2">Phase two payment</div>
-				<p class="col-lg-10" style="display: inline">$0</p>
+				<p id="pay2Num" class="col-lg-10" style="display: inline">$0</p>
 			</div>
 			
 			<div class="row">
@@ -269,18 +269,67 @@
             var loan = document.getElementById("loanNum").value;
             var P1 = document.getElementById("p1Num").value;
             var P2 = document.getElementById("p2Num").value;
+
+
             console.log(loan + "/" + P1 + "/" + P2);
-            var upper = loan * (P1/(P1+P2));
-            var lower = 12 * P1;
-            var pay = upper/lower * ( 1 + 0.25);
-            console.log(upper + "/" + lower + "/" + pay);
-            pay = Math.round(pay);
+            //var upper = loan * (P1/(P1+P2));
+            //var lower = 12 * P1;
+            var pay = (loan/(12*P1))*(1+0.025);
             console.log(pay);
+            pay = Math.round(pay);
+            var pay2 = 0
+            
+            if(P2 != 0){
+                pay2 = pay/(P1+P2)*P2;
+                pay = pay/(P1+P2)*P1;
+            }
+            pay = Math.round(pay);
+            pay2 = Math.round(pay2);
+            console.log(pay + "||" + pay2);
             var payString = "$" + pay;
             console.log(payString);
+            var pay2String = "$" + pay2;
+            console.log(pay2String);
+            
+            
             document.getElementById("payNum").textContent= payString;
+            document.getElementById("pay2Num").textContent= pay2String;
+            
             //$("#")
 		});
+    
+        window.onload = function(){
+            var loan = document.getElementById("loanNum").value;
+            var P1 = document.getElementById("p1Num").value;
+            var P2 = document.getElementById("p2Num").value;
+
+
+            console.log(loan + "/" + P1 + "/" + P2);
+            //var upper = loan * (P1/(P1+P2));
+            //var lower = 12 * P1;
+            var pay = (loan/(12*P1))*(1+0.025);
+            console.log(pay);
+            pay = Math.round(pay);
+            var pay2 = 0
+            
+            if(P2 != 0){
+                pay2 = pay/(P1+P2)*P2;
+                pay = pay/(P1+P2)*P1;
+            }
+            pay = Math.round(pay);
+            pay2 = Math.round(pay2);
+            console.log(pay + "||" + pay2);
+            var payString = "$" + pay;
+            console.log(payString);
+            var pay2String = "$" + pay2;
+            console.log(pay2String);
+            
+            
+            document.getElementById("payNum").textContent= payString;
+            document.getElementById("pay2Num").textContent= pay2String;
+        }
+
+        
 	</script>
 
 </body>
