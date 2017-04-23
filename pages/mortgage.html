@@ -29,12 +29,19 @@
     <!-- Custom Fonts -->
     <link href="../css/slider.css" rel="stylesheet" type="text/css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+        
+    </script>
 
 </head>
 
@@ -188,9 +195,9 @@
 				<div class="col-lg-2">Loan amount (HKD)</div>
 				<div class="form-inline">
 					<div class="col-lg-4">
-					<b>$0 	</b><input type="text" class="slider" value="" data-slider-min="0" data-slider-max="50000000" data-slider-step="1" data-slider-value="25000000" data-slide-tooltip="hide" ><b> $5,000,000&nbsp;&nbsp;&nbsp;</b>
+					<b>$0 	</b><input id="loaSlider" type="text" class="slider" value="" data-slider-min="0" data-slider-max="50000000" data-slider-step="1" data-slider-value="25000000" data-slide-tooltip="hide" ><b> $5,000,000&nbsp;&nbsp;&nbsp;</b>
 					</div>
-					<input type="number" class="form-control" value="25000000" step="1" style="width: 130px">
+					<input id='loanNum' type="number" class="form-control" value="25000000" step="1" style="width: 130px">
 				</div>
 			</div>
 			<div class="row">
@@ -206,21 +213,21 @@
 				<div class="col-lg-2">Repayment period</div>
 				<div class="form-inline">
 					<div class="col-lg-4">
-					<b>5 	</b><input type="text" class="slider" value="" data-slider-min="5" data-slider-max="25" data-slider-step="1" data-slider-value="10" data-slide-tooltip="hide" ><b> 25&nbsp;&nbsp;&nbsp;</b></div>
-					<input type="number" class="form-control" value="10" step="1" style="width: 130px">
+					<b>5 	</b><input id="repaySlide" type="text" class="slider" value="" data-slider-min="5" data-slider-max="25" data-slider-step="1" data-slider-value="10" data-slide-tooltip="hide" ><b> 25&nbsp;&nbsp;&nbsp;</b></div>
+					<input id='p1Num' type="number" class="form-control" value="10" step="1" style="width: 130px">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-2">Phase 2 installment</div>
 				<div class="form-inline">
 					<div class="col-lg-4">
-					<b>0 	</b><input type="text" class="slider" value="" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="-1" data-slide-tooltip="hide" ><b> 10&nbsp;&nbsp;&nbsp;</b></div>
-					<input type="number" class="form-control" value="0" step="1" style="width: 130px">
+					<b>0 	</b><input id="p2Slide" type="text" class="slider" value="" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="-1" data-slide-tooltip="hide" ><b> 10&nbsp;&nbsp;&nbsp;</b></div>
+					<input id='p2Num' type="number" class="form-control" value="0" step="1" style="width: 130px">
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-2">Phase one payment</div>
-				<p class="col-lg-10" style="display: inline">$7,434</p>
+				<p id="payNum" class="col-lg-10" style="display: inline">$7,434</p>
 			</div>
 			<div class="row">
 				<div class="col-lg-2">Phase two payment</div>
@@ -258,6 +265,21 @@
 		});
 		$(".slider").on("slide", function(slideEvt) {
 			$(this).parent().parent().find(".form-control").val(slideEvt.value);
+            console.log("slide change");
+            var loan = document.getElementById("loanNum").value;
+            var P1 = document.getElementById("p1Num").value;
+            var P2 = document.getElementById("p2Num").value;
+            console.log(loan + "/" + P1 + "/" + P2);
+            var upper = loan * (P1/(P1+P2));
+            var lower = 12 * P1;
+            var pay = upper/lower * ( 1 + 0.25);
+            console.log(upper + "/" + lower + "/" + pay);
+            pay = Math.round(pay);
+            console.log(pay);
+            var payString = "$" + pay;
+            console.log(payString);
+            document.getElementById("payNum").textContent= payString;
+            //$("#")
 		});
 	</script>
 
