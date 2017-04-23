@@ -1,9 +1,13 @@
 window.onload = function () {
+  // EUR-USD Chart
   $.getJSON('https://www.highcharts.com/samples/data/jsonp.php?filename=usdeur.json&callback=?', function (data) {
     // Create the chart
     data1 = [];
+    console.log(data[data.length-1][0]);
     for (var i = 0; i < data.length; i++) {
-      data1.push({x: data[i][0], y: data[i][1]});
+      if (data[i][0] > 1428710400*1000) {
+        data1.push({x: data[i][0]+57110400000, y: data[i][1]});
+      }
     }
     var chart1 = new CanvasJS.Chart('eur-usd-chart',
     {
@@ -32,87 +36,67 @@ window.onload = function () {
     chart1.render();
   });
 
-    for (var i = 0; i < data2.length; i++) {
-      data2[i].x = data2[i].x * 1000 + 100000000000;
-      if (data2[i].y < 10000 && data2[i].x > 1262304000*1000) {
-        data2[i].y = data2[i].y + 16000;
+  // Apple Stock Graph
+  for (var i = 0; i < data2.length; i++) {
+    data2[i].x = data2[i].x * 1000;
+  }
+  var chart2 = new CanvasJS.Chart("apple-chart",
+  {
+    zoomEnabled: true,
+    title:{
+      text: "" 
+    },
+    animationEnabled: true,
+    axisX:{
+      labelAngle: 30
+    },
+    
+    axisY :{
+      includeZero:false
+    },
+    
+    data: [
+      {
+        type: "line", 
+        xValueType: "dateTime",
+        dataPoints: data2
       }
-    }
-    var chart2 = new CanvasJS.Chart("bond-chart",
-    {
-      zoomEnabled: true,
-      title:{
-        text: "" 
-      },
-      animationEnabled: true,
-      axisX:{
-        labelAngle: 30
-      },
-      
-      axisY :{
-        includeZero:false
-      },
-      
-      data: [
-        {
-          type: "line", 
-          xValueType: "dateTime",
-          dataPoints: data2
-        }
-      ]  // random generator below
-      
-    });
-
-    chart2.render();
-
-    var chart3 = new CanvasJS.Chart("stock-chart",
-    {
-      zoomEnabled: true,
-      title:{
-        text: "" 
-      },
-      animationEnabled: true,
-      axisX:{
-        labelAngle: 30
-      },
-      
-      axisY :{
-        includeZero:false
-      },
-      
-      data: data3  // random generator below
-      
-    });
-
-    chart3.render();
-
-    $(".canvasjs-chart-credit").remove();
-}
-
-/*var limit2 = 5000;
-var y2 = 24000;
-var data2 = []; var dataSeries2 = { type: "line", xValueType: "dateTime" };
-var dataPoints2 = [];
-for (var i2 = 0; i2 < limit2; i2 += 1) {
-  y2 += (Math.random() * 10 - 5);
-  dataPoints2.push({
-    x: 1488326400000 + i2 * 1050000,
-    y: y2                
+    ]  // random generator below
+    
   });
-}
-dataSeries2.dataPoints = dataPoints2;
-data2.push(dataSeries2);*/ 
 
-var limit3 = 100000;
-var y3 = 400000;
-var data3 = []; var dataSeries3 = { type: "line", xValueType: "dateTime" };
-var dataPoints3 = [];
-for (var i3 = 0; i3 < limit3; i3 += 1) {
-  y3 += (Math.random() * 1000 - 500);
-  dataPoints3.push({
-    x: 1488326400000 + i3 * 1050000,
-    y: y3                
+  chart2.render();
+
+  // Microsoft Stock Graph
+  for (var i = 0; i < data3.length; i++) {
+    data3[i].x = data3[i].x * 1000;
+  }
+  var chart3 = new CanvasJS.Chart("microsoft-chart",
+  {
+    zoomEnabled: true,
+    title:{
+      text: "" 
+    },
+    animationEnabled: true,
+    axisX:{
+      labelAngle: 30
+    },
+    
+    axisY :{
+      includeZero:false
+    },
+    
+    data: [
+      {
+        type: "line", 
+        xValueType: "dateTime",
+        dataPoints: data3
+      }
+    ]  // random generator below
+    
   });
+
+  chart3.render();
+
+  $(".canvasjs-chart-credit").remove();
 }
-dataSeries3.dataPoints = dataPoints3;
-data3.push(dataSeries3); 
